@@ -1,0 +1,57 @@
+<!Doctype HTML>
+<html>
+  <head>
+	<title> </title>
+	<style>
+	  div {
+	  height: 200px;
+	  width: 200px;
+	  background-color: red;
+	  border-radius: 50%;
+	  }
+	</style>
+	<script>
+	  var size;
+	  var color = new Array('red', 'green', 'blue');
+	  var index;
+	  var element;
+	  size = 200;
+	  index = 0;
+
+	  function fdf() {
+	  console.log(size);
+	  console.log(index);
+	  if (size == 420)
+	  size = 190;
+	  size += 10;
+	  if (index == 2)
+	  index = -1;
+	  index++;
+	  element = document.getElementById('ll');
+	  element.style.width = size + 'px';
+	  element.style.height = size + 'px';
+	  element.style.backgroundColor = color[index];
+	  }
+	  
+	  function mouseOut() {
+	  console.log(size);
+	  console.log(index);
+	  if (size == 200)
+	  size = 205;
+	  size -= 5;
+	  if (index == 0)
+	  index = 3;
+	  index--;
+	  element = document.getElementById('ll');
+	  element.style.width = size + 'px';
+	  element.style.height = size + 'px';
+	  element.style.backgroundColor = color[index];
+	  }
+
+	</script>
+  </head>
+  <body>
+	<div id="ll" onclick="fdf()" onmouseout="mouseOut();">
+	</div>
+  </body>
+</html>

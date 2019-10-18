@@ -1,0 +1,37 @@
+#!/usr/bin/php
+<?php
+
+date_default_timezone_set("France/Paris");
+
+if ($argc > 1) {
+	$days = array(
+		1 => "lundi", 2 => "mardi", 3 => "mercredi", 4 => "jeudi", 5 => "vendredi", 6 => "samedi",
+		7 => "dimanche", 8 => "Lundi", 9 => "Mardi", 10 => "Mercredi", 11 => "Jeudi", 12 => "Vendredi",
+		13 => "Samedi", 14 => "Dimanche");
+	$months = array(
+		1 => "Janvier", 2 => "Février", 3 => "Mars", 4 => "Avril", 5 => "Mai", 6 => "Juin", 7 => "Juillet",
+		8 => "Août", 9 => "Septembre", 10 => "Octobre", 11 => "Novembre", 12 => "Décembre", 13 => "janvier",
+		14 => "février", 15 => "marche", 16 => "avril", 17 => "peut", 18 => "juin", 19 => "juillet", 20 => "août",
+		21 => "septembre", 22 => "octobre", 23 => "novembre", 24 => "décembre");
+	$date = explode(" ", $argv[1]);
+	if (count($date) != 5 || preg_match("/^[1-9]|0[1-2][0-9]|3[0-1]$/", $date[1]) === 0 ||
+		preg_match("/^[0-9]{4}$/", $date[3]) === 0 ||
+		preg_match("/^([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])$/", $date[4]) === 0 ||
+		($date[0] = array_search($date[0], $days)) === false ||
+		($date[2] = array_search($date[2], $months)) === false)
+		echo "Wrong Format\n";
+	else {
+		if ($date[0] > 7)
+			$date[0] = $date[0] - 7;
+		if ($date[2] > 12)
+			$date[2] = $date[2] - 12;
+		$time = mktime($date[4][0] * 10 + $date[4][1], $date[4][3] * 10 + $date[4][4], $date[4][6] * 10 + $date[4][7],
+					   $date[2], $date[1][0] * 10 + $date[1][1], $date[3][0] * 1000 + $date[3][1] * 100 + $date[3][2] * 10 +
+					   $date[3][3]);
+		if (date("N", $time) == $date[0])
+			echo $time."\n";
+		else
+			echo "Wrong Format\n";
+	}
+}
+?>

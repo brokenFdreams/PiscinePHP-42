@@ -1,0 +1,55 @@
+<html>
+  <head>
+	<title></title>
+	<script>
+	  var left;
+	  var right;
+	  var sign;
+
+	  setInterval(function() { alert("Pleasem use me..."); }, 30000 );
+	  function calc(event) {
+	  left = parseInt(document.getElementById('left').value);
+	  right = parseInt(document.getElementById('right').value);
+	  sign = document.getElementById('signs').value;
+	  if (left >= 0 && right >= 0) {
+	  switch (sign) {
+	  case 'plus':
+	  console.log(left + right);
+	  break;
+	  case 'min':
+	  console.log(left - right);
+	  break;
+	  case 'mult':
+	  console.log(left * right);
+	  break;
+	  case 'div':
+	  if (right == 0)
+	  console.log("It's over 9000!");
+	  else
+	  console.log(left / right);
+	  break;
+	  case 'mod':
+	  if (right == 0)
+	  console.log("It's over 9000!");
+	  else
+	  console.log(left % right);
+	  break;
+	  }
+	  } else
+	  console.log("Error :(");
+	  }
+	</script>
+  </head>
+  <body>
+	<input id="left" type="text">
+	<select id="signs" name="signs">
+	  <option value="plus">+</option>
+	  <option value="min">-</option>
+	  <option value="mult">*</option>
+	  <option value="div">/</option>
+	  <option value="mod">%</option>
+	</select>
+	<input id="right" type="text">
+	<input type="submit" onclick="calc()" value="Try me!">
+  </body>
+</html>

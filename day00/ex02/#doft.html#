@@ -1,0 +1,57 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                      :::      ::::::::  -->
+<!-- doft.html                                          :+:      :+:    :+:  -->
+<!--                                                  +:+ +:+         +:+    -->
+<!-- By: fsinged <marvin@42.fr>                     +#+  +:+       +#+       -->
+<!--                                              +#+#+#+#+#+   +#+          -->
+<!-- Created: 2019/10/08 11:36:19 by fsinged           #+#    #+#            -->
+<!-- Updated: 2019/10/08 15:24:58 by fsinged          ###   ########.fr      -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<html>
+  <head>
+	<title>Day of the 42</title>
+	<link rel="stylesheet" href="doft.css">
+	<style>
+	  body{
+	  	background-color: 505050;
+	  	margin:18px 0 0 8px;
+	  }
+	</style>
+  </head>
+  <body>
+	<div class="page">
+	  <header class="header">
+		<img class="logo" src="resources/day_of_the_42.png" alt="logo" title="Logo">
+		<img class="loupe" src="resources/loupe.png" alt="search" title="Search">
+		<a href="http://www.disney.com">
+		  <img class="reload" src="resources/reload.png" alt="reload" title="Start from the beginning">
+		</a>
+		<a href="http://www.relaischateaux.com">
+		  <img class="close" src="resources/close.gif" alt="close" title="Close">
+		</a>
+	  </header>
+	  <div class="sidebar-left">
+		<img src="resources/arrow.png" alt="Advance" title="Advance">
+		<img src="resources/main.png" alt="Take" title="Take">
+		<img class="selected" src="resources/oeil.png" alt="Look" title="Look">
+		<img src="resources/outil.png" alt="Use" title="Use">
+		<img src="resources/chat-icon.png" alt="Speak" title="Speak">
+	  </div>
+	  <div class="content">
+		<img src="resources/cluster.jpg" alt="Cluster" title="Cluster" usemap="#map">
+		<p><map name="map" id="map">
+			<area alt="mac" title="Mac" href="http://www.apple.com" shape="poly" coords="793, 424, 790, 317, 977, 338, 975, 455" />
+			<area alt="chair" title="Chair" href="http://www.ikea.com" shape="poly" coords="400, 350, 400, 450, 500, 300, 300, 500" />
+		</map></p>
+	  </div>
+	  <div class="sidebar-right">
+		<img src="resources/book.png" alt="source" title="Sources">
+		<img src="resources/towel.png" alt="towel" title="Towel">
+		<div class="wall" title="Wall"></div>
+	  </div>
+	</div>
+  </body>
+</html>

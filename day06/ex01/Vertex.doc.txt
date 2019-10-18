@@ -1,0 +1,15 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles a vertex coordinate.
+
+An instance can be constructed from a xyz values and default make w = 1.0 and
+Color - white:
+new Vertex( array( 'x' => 1, 'y' => 1, 'z' => 1 ) );
+
+Or from a xyz values and w or/and Color:
+new Vertex( array( 'x' => 1, 'y' => 1, 'z' => 1,
+	'color' => new Color( array( 'rgb' => 12345 ) ) ) );
+
+x, y, z, w converted to float.
+color converted to Color class, see Color.doc.txt.
+Any other use is undefined behavior.
+---------------------------------------------------------------------- Vertex ->

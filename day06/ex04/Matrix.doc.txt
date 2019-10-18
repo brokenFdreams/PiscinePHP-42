@@ -1,0 +1,31 @@
+<- Matrix ----------------------------------------------------------------------
+The Matrix class handles matrix.
+
+It's got constants:
+IDENTITY = "IDENTITY";
+SCALE = "SCALE";
+RX = "RX";
+RY = "RY";
+RZ = "RZ";
+TRANSLATION = "TRANSLATION";
+PROJECTION = "PROJECTION";
+
+On wich depends the folowing arguments:
+SCALE -> _scale (the scale factor);
+RX, RY, RZ -> _angle (the rotation angle in radians);
+TRANSLATION -> _vtc (is a vector, see Vector.doc.txt);
+PROJECTION -> _fov (projection field of view in degrees),
+_ratio (projected image ratio), _near (projection’s near clipping plane),
+_far (projection’s far clipping plane)
+
+When matrix created, you can't change it's value, from setters.
+
+The class provides the following methods :
+
+Matrix mult( Matrix $rhs );
+Returns the multiplication of both matrices.
+
+Vertex transformVertex( Vertex $vtx );
+returns a new vertex resulting from the transformation
+of the vertex by the matrix.
+---------------------------------------------------------------------- Matrix ->

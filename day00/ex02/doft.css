@@ -1,0 +1,158 @@
+********************************************************************************
+                                                                                
+                                                          :::      ::::::::     
+     doft.css                                           :+:      :+:    :+:     
+                                                      +:+ +:+         +:+       
+     By: fsinged <marvin@42.fr>                     +#+  +:+       +#+          
+                                                  +#+#+#+#+#+   +#+             
+     Created: 2019/10/08 12:22:31 by fsinged           #+#    #+#               
+     Updated: 2019/10/08 16:26:55 by fsinged          ###   ########.fr         
+                                                                                
+********************************************************************************
+
+	body{
+		background-color: 505050;
+		margin:18px 0 0 8px;
+	}
+
+	.page{
+		margin:0 auto;
+		width:1420px;
+	}
+
+	.header{
+		width:1420px;
+		height:137px;
+		position:relative;
+	}
+
+	.header, .sidebar-left, .sidebar-right, .content, .form{
+		border-radius:9px;
+		box-shadow:10px 10px 10px #000000;
+		background-color:#909090;
+	}
+	
+	header img.logo{
+		height:110px;
+		margin:10px 0 0 10px;
+	}
+
+	header img.loupe{
+		position:absolute;
+		top:10px;
+		right:30px;
+	}
+
+	header img.reload, header img.close{
+		position:absolute;
+		right:10px;
+		height:20px;
+		width:20px;
+	}
+
+	header img.reload{
+		top:10px;
+	}
+
+	header img.close{
+		bottom:10px;
+	}
+
+	.sidebar-left{
+		width:108px;
+		height:410px;
+		float:left;
+		margin:20px 0 0 30px;
+		padding:15px 0 0 32px;
+	}	
+
+	.sidebar-right{
+		width:105px;
+		height:410px;
+		float:left;
+		margin:20px 0 0 30px;
+		padding:15px 0 0 35px;
+	}
+
+	.sidebar-left img, .sidebar-right img{
+		width:70px;
+		margin-bottom:10px;
+	}
+
+	.sidebar-left img.selected{
+		border:5px solid red;
+		margin:-5px 0 1px -5px;
+		border-radius: 5px;
+		
+	}
+
+	.sidebar-right .wall{
+		width:120px;
+		height:70px;
+		margin:-5px 0 0 -25px;
+		background-image:url(resources/brick.jpg)
+	}
+
+	.content{
+		width:1020px;
+		height:582px;
+		float:left;
+		position:relative;
+		margin:20px 0 0 30px;
+	}
+
+	.content img{
+		margin:10px;
+		width:1000px;
+		height:562px;
+	}
+
+	.form{
+		background-color:88ff89;
+		width:500px;
+		height:150px;
+		position:absolute;
+		bottom:410px;
+		left:67px;
+		padding:10px;
+		font-family:Verdana;
+		font-size:16px;
+		letter-spacing:1px;
+		font-weight:300;
+	}
+
+	.form span.big{
+		font-family:Times;
+		font-size:31px;
+	}
+
+	.form span.ordinaries{
+		text-shadow:5px 5px 5px #ff0000;
+	}
+
+	.form span.bonjour{
+		font-style:italic;
+	}
+
+	.form form{
+		height:22px;
+	}
+
+	.form form input[type="text"]{
+		margin-left:2px;
+		width:375px;
+		broder:2px solid #9d9d9d;
+		border-bottom-color:#eeeeee;
+		border-right-color:#eeeeee;
+		height:22px;
+	}
+
+	.form form input[type="submit"]{
+		border:1px solid #a8a4a5;
+		border-radius:1px;
+		background-color:f4efff;
+		margin-left:4px;
+		height:22px;
+		font-size:12px;
+		letter-spacing:1px;
+	}
